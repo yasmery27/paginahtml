@@ -1,0 +1,103 @@
+/* 1. VARIABLES */
+:root {
+  --bg-gradient: linear-gradient(135deg, #132160 0%, #ba79fd 100%);
+  --glass-bg: rgba(0, 0, 0, .5);
+  --glass-bg2: #ffca1a;
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --text-color: #000000;
+  --card-hover: rgba(255, 255, 255, 0.2);
+  --card-hover2: #ffd94d;
+}
+
+/* 2. RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, apple-system,       sans-serif;
+  font-sizes: 1.8rem;
+ /* background: var(--bg-gradient);*/
+  background-color: #ffffcc;
+  background-attachment: fixed;
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* 3. HEADER */
+.profile-header{
+  text-align:center;
+  margin-bottom:2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.bio {
+  font-size: 1rem;
+  opacity: 0.9;
+  max-width: 300px;
+}
+
+/* 4. MAIN (Los enlaces) */
+.links-container {
+  width: 100%;
+  max-width: 400px; /* Limita el ancho en pantallas grandes (UX) */
+}
+
+.links-list {
+  list-style: none; /* Quita los puntos de la lista */
+}
+
+.link-card {
+  display: block;
+  background: var(--glass-bg2);
+  border: 5px dotted var(--glass-border);
+  backdrop-filter: blur(10px); /* Efecto cristal desenfocado */
+  color: black;
+  text-decoration: none;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease; /* Para que la animación sea fluida */
+}
+
+/* 5. INTERACTIVIDAD (UX/UI) */
+.link-card:hover {
+  background: var(--card-hover2);
+  transform: translateY(-3px); /* Pequeño salto al pasar el ratón */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.link-card:active {
+  transform: scale(0.98); /* Feedback de "clic" */
+}
+
+/* 6. FOOTER */
+.profile-footer {
+  margin-top: auto; /* Empuja el footer al final */
+  padding-top: 2rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* 7. RESPONSIVE (Media Queries) */
+@media (min-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .link-card {
+    padding: 1.2rem;
+  }
+}
